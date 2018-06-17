@@ -1,11 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // routing
 import { AppRoutingModule } from './app-routing.module';
-
-// meterial
-import { MaterialModule } from './material/material.module';
 
 // modules
 import { AuthModule } from './auth/auth.module';
@@ -18,10 +16,10 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule,
-    MaterialModule,
+    BrowserModule, 
+    BrowserAnimationsModule,
     AuthModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
