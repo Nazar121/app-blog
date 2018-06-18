@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatIconModule,
     MatGridListModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatMenuModule
   ],
   exports: [
     ReactiveFormsModule,
@@ -35,7 +37,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatIconModule,
     MatGridListModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatMenuModule
   ],
   declarations: []
 })

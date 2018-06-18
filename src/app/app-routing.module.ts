@@ -5,8 +5,9 @@ import { PreloadAllModules, Routes, RouterModule } from '@angular/router';
 // components
 
 const ROUTES: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full', },
-  { path: '**', redirectTo: '' }
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'account', loadChildren: './account/account.module#AccountModule' },
+  { path: '**', redirectTo: 'login' }
 ];
 
 @NgModule({
