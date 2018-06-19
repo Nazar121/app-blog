@@ -11,6 +11,7 @@ import { SharedModule } from './shared/shared.module';
 // components
 import { AccountComponent } from './account.component';
 import { HeaderComponent } from './header/header.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { HeaderComponent } from './header/header.component';
   ],
   declarations: [
     AccountComponent,
-    HeaderComponent
+    HeaderComponent,
+    SidenavComponent
   ]
 })
 export class AccountModule { }

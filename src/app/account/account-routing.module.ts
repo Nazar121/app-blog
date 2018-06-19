@@ -5,8 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { AccountComponent } from './account.component';
 
 const ROUTES: Routes = [
-  { path: '', children: [
-    { path: '', component: AccountComponent }
+  { path: '', component: AccountComponent, children: [
+    { path: 'categories', loadChildren: './categories/categories.module#CategoriesModule' }
   ]}
 ];
 
