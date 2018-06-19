@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 // dialog
 import { MatDialog, MatDialogRef, MatDialogConfig } from '@angular/material';
-import { CEDialogComponent } from './ce-dialog/ce-dialog.component';
+import { CECategoryDialogComponent } from './ce-category-dialog/ce-category-dialog.component';
 
 @Component({
   selector: 'app-categories',
@@ -20,36 +20,22 @@ export class CategoriesComponent implements OnInit {
 
   // dialog
   openDialog(): void {
-    let dialogRef = this.dialog.open(CEDialogComponent, {
+    let dialogRef = this.dialog.open(CECategoryDialogComponent, {
       maxWidth: '500px',
       data: { ...this.settingsCE }
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed ', result);
+      console.log('The dialog was closed. Category is ', result);
     });
   }
 
   // create category
   createCategory() {
     this.settingsCE = {
-      status: 'create',
-      title: 'Create New Category',
+      create: true,
       value: {
         name: '',
-        image: ''
-      }
-    };
-    this.openDialog();
-  }
-
-  // edit category
-  editCategory(category) {
-    this.settingsCE = {
-      status: 'edit',
-      title: 'Edit Current Category',
-      value: {
-        name: 'Angular 6',
         image: ''
       }
     };

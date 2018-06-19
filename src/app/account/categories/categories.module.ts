@@ -9,8 +9,9 @@ import { MaterialModule } from '../../material/material.module';
 
 // components
 import { CategoriesComponent } from './categories.component';
-import { CECategoryComponent } from './ce-category/ce-category.component';
-import { CEDialogComponent } from './ce-dialog/ce-dialog.component';
+import { CECategoryDialogComponent } from './ce-category-dialog/ce-category-dialog.component';
+import { CategoryComponent } from './category/category.component';
+import { DCategoryDialogComponent } from './d-category-dialog/d-category-dialog.component';
 
 @NgModule({
   imports: [
@@ -20,11 +21,13 @@ import { CEDialogComponent } from './ce-dialog/ce-dialog.component';
   ],
   declarations: [
     CategoriesComponent,
-    CECategoryComponent,
-    CEDialogComponent
+    CECategoryDialogComponent,
+    CategoryComponent,
+    DCategoryDialogComponent
   ],
   entryComponents: [
-    CEDialogComponent
+    CECategoryDialogComponent,
+    DCategoryDialogComponent
   ]
 })
 export class CategoriesModule { }

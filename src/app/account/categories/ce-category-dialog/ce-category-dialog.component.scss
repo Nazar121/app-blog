@@ -1,5 +1,12 @@
 @import '../../../scss/utils/mixins';
 
+// close modal
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .add-category {
     padding: 15px 0;
 }
