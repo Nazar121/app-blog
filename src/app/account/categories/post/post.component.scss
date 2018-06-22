@@ -1,0 +1,23 @@
+@import '../../../scss/utils/mixins';
+
+.post {
+    cursor: pointer;
+
+    .image {
+        display: block;
+        height: 350px;
+        background: black;
+    }
+
+    .title {
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .description {
+        font-size: 18px;
+        line-height: 2;
+        text-align: justify;
+    }
+}

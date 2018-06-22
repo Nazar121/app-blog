@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <mat-card class="post">
+        <img mat-card-image src="" class="image" alt="">
+        <mat-card-content>
+          <div class="flex" (click)="$event.stopPropagation();">
+            <div class="created">11.25.2135</div>
+            <div class="functions">
+              <i class="material-icons">edit</i>
+              <i class="material-icons" (click)="deleteCategoryDialog()">delete</i>
+            </div>
+          </div>
+          <div class="title">ES 6</div>
+          <div class="content">content...</div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

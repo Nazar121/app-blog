@@ -6,7 +6,6 @@ import { AccountRoutingModule } from './account-routing.module';
 
 // modules
 import { MaterialModule } from '../material/material.module';
-import { SharedModule } from './shared/shared.module';
 
 // components
 import { AccountComponent } from './account.component';
@@ -17,8 +16,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
   imports: [
     CommonModule,
     AccountRoutingModule,
-    MaterialModule,
-    SharedModule
+    MaterialModule
   ],
   declarations: [
     AccountComponent,

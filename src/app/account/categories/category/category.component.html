@@ -1,13 +1,15 @@
 <mat-card>
-  <div class="flex">
-      <div>{{category.created | date : "dd.MM.yyy"}}</div>
-      <div class="functions">
-        <i class="material-icons" (click)="editCategory()">edit</i>
-        <i class="material-icons" (click)="deleteCategoryDialog()">delete</i>
-      </div>
+  <div class="flex" (click)="$event.stopPropagation();">
+    <div>{{category.created | date : "dd.MM.yyy"}}</div>
+    <div class="functions">
+      <i class="material-icons" (click)="editCategory()">edit</i>
+      <i class="material-icons" (click)="deleteCategoryDialog()">delete</i>
     </div>
-  <img mat-card-image class="image" [src]="category.image" alt="">
-  <mat-card-content>
-    <div class="name">{{category.name}}</div>
-  </mat-card-content>
+  </div>
+  <ng-container (click)="currentCategory()">
+    <img mat-card-image class="image" [src]="category.image" alt="" style="cursor: pointer;">
+    <mat-card-content style="cursor: pointer;">
+      <div class="name">{{category.name}}</div>
+    </mat-card-content>
+  </ng-container>
 </mat-card>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 // dialog
 import { MatDialog, MatDialogRef, MatDialogConfig } from '@angular/material';
@@ -14,7 +15,10 @@ export class CategoriesComponent implements OnInit {
   // create, edit category
   settingsCE: any;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(
+    private router: Router,
+    public dialog: MatDialog
+  ) { }
 
   ngOnInit() {}
 
@@ -42,4 +46,11 @@ export class CategoriesComponent implements OnInit {
     this.openDialog();
   }
 
+  // Current category
+  currentCategory() {
+    // this.router.navigate([`${this.router.url}/category`], {queryParams: {id: 'myIdNewOlasd-sdf-cdsc'}});
+    this.router.navigate([`${this.router.url}/category`]);
+  }
+
+  
 }

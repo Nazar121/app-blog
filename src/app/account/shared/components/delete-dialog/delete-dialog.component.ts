@@ -4,14 +4,14 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
-  selector: 'app-d-category-dialog',
-  templateUrl: './d-category-dialog.component.html',
-  styleUrls: ['./d-category-dialog.component.scss']
+  selector: 'app-delete-dialog',
+  templateUrl: './delete-dialog.component.html',
+  styleUrls: ['./delete-dialog.component.scss']
 })
-export class DCategoryDialogComponent implements OnInit {
+export class DeleteDialogComponent implements OnInit {
 
   constructor(
-    public dialogRef: MatDialogRef<DCategoryDialogComponent>,
+    public dialogRef: MatDialogRef<DeleteDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public settings: any
   ) { }
 
@@ -21,6 +21,7 @@ export class DCategoryDialogComponent implements OnInit {
   }
 
   ngOnInit() {
+    // console.log(this.settings);
   }
 
 }

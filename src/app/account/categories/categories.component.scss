@@ -1,0 +1,19 @@
+@import '../../scss/utils/mixins';
+
+// Create New Category
+.create-category {
+    margin: 15px 0;
+    cursor: pointer;
+    
+    i {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 70px;
+        @include transition(.3s);
+    }
+
+    &:hover i {
+        transform: scale(1.2);
+    }
+}

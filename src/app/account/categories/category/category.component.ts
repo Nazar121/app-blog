@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 // dialog
 import { MatDialog, MatDialogRef, MatDialogConfig } from '@angular/material';
 import { CECategoryDialogComponent } from '../ce-category-dialog/ce-category-dialog.component';
-import { DCategoryDialogComponent } from '../d-category-dialog/d-category-dialog.component';
+import { DeleteDialogComponent } from '../../shared/components/delete-dialog/delete-dialog.component';
 
 @Component({
   selector: 'app-category',
@@ -14,7 +14,9 @@ export class CategoryComponent implements OnInit {
 
   category: any;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(
+    public dialog: MatDialog
+  ) { }
 
   ngOnInit() {
     this.category = {
@@ -26,8 +28,11 @@ export class CategoryComponent implements OnInit {
 
   // dialog for delete category
   deleteCategoryDialog(): void {
-    let dialogRef = this.dialog.open(DCategoryDialogComponent, {
-      maxWidth: '350px'
+    let dialogRef = this.dialog.open(DeleteDialogComponent, {
+      maxWidth: '400px',
+      data: {
+        message: 'If, you delete this category, all the posts in this category will also be deleted.'
+      }
     });
 
     dialogRef.afterClosed().subscribe((res: boolean) => {
