@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { CategoriesRoutingModule } from './categories-routing.module';
 
 // modules
+import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 import { MaterialModule } from '../../material/material.module';
 
 // components
@@ -15,10 +16,13 @@ import { DeleteDialogComponent } from '../shared/components/delete-dialog/delete
 import { CurrentCategoryComponent } from './current-category/current-category.component';
 import { PostComponent } from './post/post.component';
 import { CurrentPostComponent } from './current-post/current-post.component';
+import { CEPostComponent } from './ce-post/ce-post.component';
 
 @NgModule({
   imports: [
     CommonModule,
+    FroalaEditorModule.forRoot(),
+    FroalaViewModule.forRoot(),
     MaterialModule,
     CategoriesRoutingModule
   ],
@@ -29,7 +33,8 @@ import { CurrentPostComponent } from './current-post/current-post.component';
     DeleteDialogComponent,
     CurrentCategoryComponent,
     PostComponent,
-    CurrentPostComponent
+    CurrentPostComponent,
+    CEPostComponent
   ],
   entryComponents: [
     CECategoryDialogComponent,
